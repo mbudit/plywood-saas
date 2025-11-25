@@ -1,4 +1,4 @@
-import { useDashboardStore, type ProjectStatus, type Project } from "@/store/dashboardStore"
+import { useDashboardStore, type ProjectStatus } from "@/store/dashboardStore"
 import { DragDropContext, Droppable, Draggable, type DropResult } from "@hello-pangea/dnd"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
