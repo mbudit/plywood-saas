@@ -119,6 +119,12 @@ export const useDashboardStore = create<DashboardState>((set, get) => ({
                 { id: '4', name: 'Bedroom Wardrobe', client: 'Sarah Lee', status: 'Finishing', dueDate: '2023-11-01', value: 2800, items: 'Wardrobe', dimensions: '2.5m x 2m', materials: 'Pine', estimatedFinishDate: '2023-11-01' },
                 { id: '5', name: 'Custom Bookshelf', client: 'David Brown', status: 'Packaging', dueDate: '2023-11-25', value: 1500, items: 'Bookshelf', dimensions: '1.5m x 2m', materials: 'Walnut Veneer', estimatedFinishDate: '2023-11-25' },
                 { id: '6', name: 'Coffee Table', client: 'Emily White', status: 'Delivered', dueDate: '2023-10-25', value: 800, items: 'Coffee Table', dimensions: '1m x 0.5m', materials: 'Glass & Wood', estimatedFinishDate: '2023-10-25' },
+                { id: '7', name: 'Reception Desk', client: 'Hotel Grand', status: 'Designing', dueDate: '2023-12-01', value: 4500, items: 'Reception Desk', dimensions: '3m x 1.2m', materials: 'Marble & Wood', estimatedFinishDate: '2023-12-01' },
+                { id: '8', name: 'Conference Table', client: 'BizSolutions', status: 'Cutting', dueDate: '2023-12-05', value: 3200, items: 'Conference Table', dimensions: '4m x 1.5m', materials: 'Teak', estimatedFinishDate: '2023-12-05' },
+                { id: '9', name: 'TV Unit', client: 'Mark Wilson', status: 'Assembly', dueDate: '2023-11-28', value: 1800, items: 'TV Unit', dimensions: '2m x 0.5m', materials: 'Plywood', estimatedFinishDate: '2023-11-28' },
+                { id: '10', name: 'Shoe Rack', client: 'Linda Green', status: 'Finishing', dueDate: '2023-11-30', value: 600, items: 'Shoe Rack', dimensions: '1m x 0.4m', materials: 'Engineered Wood', estimatedFinishDate: '2023-11-30' },
+                { id: '11', name: 'Study Table', client: 'James Miller', status: 'Packaging', dueDate: '2023-11-22', value: 900, items: 'Study Table', dimensions: '1.2m x 0.6m', materials: 'Rubberwood', estimatedFinishDate: '2023-11-22' },
+                { id: '12', name: 'Bar Counter', client: 'The Lounge', status: 'Designing', dueDate: '2023-12-10', value: 5500, items: 'Bar Counter', dimensions: '3.5m x 1.2m', materials: 'Granite & Wood', estimatedFinishDate: '2023-12-10' },
             ];
 
             const mockInventory: InventoryItem[] = [
