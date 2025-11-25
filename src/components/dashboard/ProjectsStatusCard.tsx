@@ -17,12 +17,12 @@ export function ProjectsStatusCard({ projectsByStatus }: ProjectsStatusCardProps
     }
 
     return (
-        <Card className="col-span-1">
+        <Card className="col-span-1 h-full">
             <CardHeader>
                 <CardTitle>Projects by Status</CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     {(Object.keys(projectsByStatus) as ProjectStatus[]).map((status) => (
                         <div key={status} className="flex items-center">
                             <div className={`w-2 h-2 rounded-full mr-2 ${statusColors[status]}`} />

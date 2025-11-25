@@ -9,7 +9,7 @@ interface LowStockCardProps {
 
 export function LowStockCard({ items }: LowStockCardProps) {
     return (
-        <Card className="col-span-1">
+        <Card className="col-span-1 h-full">
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <AlertTriangle className="h-4 w-4 text-amber-500" />

@@ -8,7 +8,7 @@ interface UpcomingDeliveriesCardProps {
 
 export function UpcomingDeliveriesCard({ deliveries }: UpcomingDeliveriesCardProps) {
     return (
-        <Card className="col-span-1">
+        <Card className="col-span-1 h-full">
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                     <Truck className="h-4 w-4 text-blue-500" />

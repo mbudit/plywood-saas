@@ -2,9 +2,10 @@ import { useEffect } from "react"
 import { useDashboardStore } from "@/store/dashboardStore"
 import { StatCard } from "@/components/dashboard/StatCard"
 import { ProjectsStatusCard } from "@/components/dashboard/ProjectsStatusCard"
+import { DashboardCharts } from "@/components/dashboard/DashboardCharts"
 import { LowStockCard } from "@/components/dashboard/LowStockCard"
 import { UpcomingDeliveriesCard } from "@/components/dashboard/UpcomingDeliveriesCard"
-import { FolderKanban, DollarSign, Package } from "lucide-react"
+import { FolderKanban, DollarSign, Package, Users } from "lucide-react"
 
 export default function Dashboard() {
     const {
@@ -12,6 +13,7 @@ export default function Dashboard() {
         inventory,
         deliveries,
         stats,
+        customers,
         isLoading,
         fetchDashboardData
     } = useDashboardStore()
@@ -64,16 +66,21 @@ export default function Dashboard() {
                     description="Items below threshold"
                     trend={{ value: 2, label: "new items", positive: false }}
                 />
+                <StatCard
+                    title="Total Customers"
+                    value={customers.length}
+                    icon={Users}
+                    description="Active clients"
+                    trend={{ value: 4, label: "new this month", positive: true }}
+                />
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-                <div className="col-span-4">
-                    <ProjectsStatusCard projectsByStatus={statusCounts} />
-                </div>
-                <div className="col-span-3 space-y-4">
-                    <LowStockCard items={lowStockItems} />
-                    <UpcomingDeliveriesCard deliveries={deliveries} />
-                </div>
+            <DashboardCharts />
+
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <ProjectsStatusCard projectsByStatus={statusCounts} />
+                <UpcomingDeliveriesCard deliveries={deliveries} />
+                <LowStockCard items={lowStockItems} />
             </div>
         </div>
     )
